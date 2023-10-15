@@ -23,9 +23,11 @@ h1 {
 .card {
   background: rgba(235, 229, 226, 0.699);
   box-shadow: 0px 0px 18px 3px rgba(131, 91, 17, 0.349);
-  border: none;
+  border: 1px solid rgba(65, 48, 38, 0.699);
   color: rgb(53, 52, 52);
   border-radius: 25px;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
 }
 
 .modal {
