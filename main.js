@@ -50,7 +50,7 @@ const gotPersonajesApi = fetch("https://thronesapi.com/api/v2/Characters")
   });
 
 const templateCardsPersonajes = function (img, nombreCompleto, familia, id) {
-  return `<div class="pt-4 col-lg-4 col-md-6 col-sm-12">
+  return `<div class="pt-5 col-lg-4 col-md-6 col-sm-12">
             <div class="card text-center">
               <img
                 src="${img}"
