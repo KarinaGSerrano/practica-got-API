@@ -2,9 +2,11 @@
 
 const gotPersonajesApi = fetch("https://thronesapi.com/api/v2/Characters")
   .then((response) => response.json())
-  .then((data) => data);
+  .then((data) => {
+    data.forEach((personaje) => {});
+  });
 
-const templatePersonajes = function (img, nombreCompleto, familia) {
+const templateCardPersonajes = function (img, nombreCompleto, familia) {
   ` <div class="pt-4 col-lg-4 col-md-6 col-sm-12">
       <div class="card text-center">
         <img
