@@ -43,6 +43,7 @@ const gotPersonajesApi = fetch("https://thronesapi.com/api/v2/Characters")
         modalDato1.innerHTML = personaje.fullName;
         modalDato2.innerHTML = personaje.title;
         modalDato3.innerHTML = personaje.family;
+        localStorage.setItem(personaje.fullName, personaje.fullName);
       });
     });
     return data;

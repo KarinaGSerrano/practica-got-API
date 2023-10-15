@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Historial Películas</title>
+    <title>Historial</title>
   </head>
   <header>
     <div class="text-start pt-5">
@@ -23,13 +23,9 @@
     </div>
   </header>
   <body>
-    <h1 class="text-center">Historial:</h1>
+    <h1 class="text-center">Historial de personajes seleccionados:</h1>
     <div class="container">
-      <ol class="list-group list-group-numbered">
-        <li class="list-group-item">hola</li>
-        <li class="list-group-item">chau</li>
-        <li class="list-group-item">hola</li>
-      </ol>
+      <ol class="list-group list-group-numbered"></ol>
     </div>
 
     <script
@@ -42,5 +38,22 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script>
+      //recuperando peliculas seleccionadas en la localStorage
+      const personajes = Object.keys(localStorage);
+      const ol = document.querySelector("ol");
+      personajes.forEach((personaje) =>
+        ol.insertAdjacentHTML(
+          "beforeend",
+          `<li class="list-group-item">${personaje}</li>`
+        )
+      );
+      function limpiarStorage() {
+        localStorage.clear();
+        ol.textContent = "";
+      }
+      const btnClear = document.querySelector(".btn-clear");
+      btnClear.addEventListener("click", limpiarStorage);
+    </script>
   </body>
 </html>
