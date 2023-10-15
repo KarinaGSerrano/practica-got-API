@@ -31,7 +31,8 @@ const gotPersonajesApi = fetch("https://thronesapi.com/api/v2/Characters")
         templateCardsPersonajes(
           personaje.imageUrl,
           personaje.fullName,
-          personaje.family
+          personaje.family,
+          personaje.id
         )
       );
 
